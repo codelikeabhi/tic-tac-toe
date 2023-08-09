@@ -1,0 +1,133 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    background-color: rgba(10, 200, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    border-radius: 1rem;
+    background-color: rgba(10, 200, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+}
+
+.card-box{
+    position: relative;
+    width: 90%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 8rem;
+}
+
+.card{
+    border-radius: 1rem;
+    background-color: rgba(10, 200, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 1.5rem 2rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+}
+
+.card h2{
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.box{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.box7, .box8{
+    border-right: 2px solid white;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+
+.btn{
+    color: white;
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    background-color: rgba(10, 200, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
